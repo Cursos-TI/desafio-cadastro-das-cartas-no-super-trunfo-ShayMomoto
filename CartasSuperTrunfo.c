@@ -1,11 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main() {
+    int menu, escolhaMenu;
     char codigo1[4], nome1[50], codigo2[4], nome2[50];
     unsigned long int populacao1, populacao2;
     float area1, area2;
     double pib1, pib2;
     int pt1, pt2; // Pontos Turísticos
+
+    printf("Escolha uma opção: \n");
+    printf("1. Iniciar jogo.\n");
+    printf("2. Dicas do jogo.\n");
+    printf("3. Fechar o jogo.\n");
+    scanf("%d", &escolhaMenu);
+
+    switch (escolhaMenu)
+    {
+    case 1:
 
     // Cadastro da primeira cidade
     printf ("\n*** Cadastre a Primeira Cidade ***\n");
@@ -90,4 +103,23 @@ if (pib1 > pib2){
              printf("A carta 2 usou o Super poder na Carta 1\n");
                }
     return 0;
+        
+        break;
+
+    case 2:
+
+        printf("Escolha uma cidade e cadastre suas informações, como nome, população, área (Km²), pib, pontos turistios e o Código da cidade como por exemplo: A01.\n");
+
+    break;
+
+    case 3:
+        printf("Jogo sendo finalizado");
+    break;
+    
+    default:
+    printf("Opção inválida.\n");
+        break;
+    }
+return 0;
+   
 }
